@@ -1,14 +1,10 @@
 # encoding: utf-8
 
-SECRET_KEY='JACK_ZH'         # session key
-TITLE='zWiki'                # wiki title
+SECRET_KEY='dmxiaoshen'         # session key
+TITLE='Wiki'                # wiki title
 
 CONTENT_DIR="markdown"       # wiki(blog) save file dir
 USER_CONFIG_DIR="content"    # ...
-PRIVATE=False                # logout edit del ... flag
-SHOWPRIVATE=False            # logout show flag
+PRIVATE=True                # logout edit del ... flag
+SHOWPRIVATE=True            # logout show flag
 UPLOAD_DIR="./static/upload"
-
-# from 畅言： http://changyan.sohu.com/install/code/pc
-SOHUCS_APPID = "cyrE7gU83"
-SOHUCS_CONF = "prod_1f3b1e3a86d5da44e0295ab22fb27033"

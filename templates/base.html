@@ -7,7 +7,7 @@
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='responsive.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='pygments.css') }}">
         <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
-        <title>zwiki</title>
+        <title>wiki</title>
     </head>
 
     <body>
@@ -21,8 +21,7 @@
                                 <li><a href="{{ url_for('home') }}">Home</a></li>
                                 <li><a href="{{ url_for('index') }}">Index</a></li>
                                 <li><a href="{{ url_for('tags') }}">Tags</a></li>
-                                <li><a href="{{ url_for('search') }}">Search</a></li>
-                                <li><a href="{{ url_for('about') }}">About</a></li>
+                                <li><a href="{{ url_for('search') }}">Search</a></li>               
                                 <li class="divider-vertical"></li>
                                 <li><a href="{{ url_for('create') }}">New Page</a></li>
                                 <li class="divider-vertical"></li>
@@ -76,25 +75,6 @@
                     {% endblock sidebar %}
                 </div>
             </div>
-        </div>
-        <div class="footer container">
-            <!--高速版，加载速度快，使用前需测试页面的兼容性-->
-            <div class="SOHUCS" id="SOHUCS"></div>
-            <script>
-              (function(){
-                var appid = '{{ config.SOHUCS_APPID }}',
-                conf = '{{ config.SOHUCS_CONF }}';
-                var doc = document,
-                s = doc.createElement('script'),
-                h = doc.getElementsByTagName('head')[0] || doc.head || doc.documentElement;
-                s.type = 'text/javascript';
-                s.charset = 'utf-8';
-                s.src =  'http://assets.changyan.sohu.com/upload/changyan.js?conf='+ conf +'&appid=' + appid;
-                h.insertBefore(s,h.firstChild);
-                window.SCS_NO_IFRAME = true;
-              })()
-            </script>    
-            <br/> 
         </div>
         <script type="text/javascript" src="{{ url_for('static', filename='jquery.min.js') }}"></script>
         <script type="text/javascript" src="{{ url_for('static', filename='ajaxfileupload.js') }}"></script>

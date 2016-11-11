@@ -3,13 +3,12 @@ import os
 import json
 from functools import wraps
 from flask import (Flask, render_template, flash, redirect, url_for, request)
-from werkzeug.utils import secure_filename
 from flask.ext.login import (LoginManager, login_required, current_user, login_user, logout_user)
 from flask.ext.script import Manager
 
 from model import Wiki, UserManager
 from form import URLForm, SearchForm, EditorForm, LoginForm, AddLnkForm, Processors
-from utils import make_salted_hash, check_hashed_password, allowed_file, get_save_name, get_md5, save_uploadfile_to_backup
+from utils import make_salted_hash, check_hashed_password, allowed_file, secure_filename,get_save_name, get_md5, save_uploadfile_to_backup
 
 
 import sys
