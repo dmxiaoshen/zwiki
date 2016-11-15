@@ -1,4 +1,7 @@
 netstat -apn | grep port
-kill -9 taskId
+kill -9 $id
+
+ps -ef | grep python
+kill -9 $id
 
 nohup gunicorn -b ip:port app:app &
