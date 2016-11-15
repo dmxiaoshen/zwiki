@@ -9,6 +9,6 @@ echo $NAME
 else
 echo $NAME
 fi
-nohup gunicorn -b localhost:$NAME app:app &
+nohup gunicorn -b 45.32.19.181:$NAME app:app &
 echo "started"
 echo "---------------"
