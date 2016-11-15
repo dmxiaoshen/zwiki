@@ -1,0 +1,4 @@
+netstat -apn | grep port
+kill -9 taskId
+
+nohup gunicorn -b ip:port app:app &
