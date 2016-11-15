@@ -6,9 +6,9 @@ upload
 nohup.out
 # C extensions
 *.so
+*.sh
 
 # Distribution / packaging
-start.sh
 .project
 .Python
 env/
